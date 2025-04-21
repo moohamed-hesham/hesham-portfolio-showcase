@@ -1,0 +1,147 @@
+
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Calendar, Mail, Phone, Linkedin, User, Award, Book } from 'lucide-react';
+
+const AboutSection = () => {
+  return (
+    <section id="about" className="py-20 bg-accent/30">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="section-title">About Me</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            Get to know more about my background, skills, and what drives me in the world of data analysis.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+              <User size={24} className="text-primary" />
+              <span>My Background</span>
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              I'm a highly motivated Data Analyst with a strong passion for sales and marketing. 
+              My analytical approach and attention to detail allow me to transform complex data into 
+              meaningful insights that drive business decisions.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              With expertise in Excel, SQL, Python, and Power BI, I specialize in descriptive analysis 
+              and creating impactful data visualizations that tell compelling stories.
+            </p>
+            
+            <div className="pt-4">
+              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                <Book size={24} className="text-primary" />
+                <span>Education</span>
+              </h3>
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="p-4">
+                    <div className="font-medium">Bachelor's Degree in Business Administration</div>
+                    <div className="text-gray-500">Cairo University, 2016-2020</div>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <div className="font-medium">Data Analysis Professional Certificate</div>
+                    <div className="text-gray-500">Google, 2021</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            <div className="pt-4">
+              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                <Award size={24} className="text-primary" />
+                <span>Achievements</span>
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li>Reduced reporting time by 40% through process automation</li>
+                <li>Identified $150K in potential savings through data analysis</li>
+                <li>Improved sales forecast accuracy by 25%</li>
+                <li>Recognized as Top Analyst Q2 2023</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="grid gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-6">Personal Information</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Calendar size={20} className="text-primary mt-1" />
+                    <div>
+                      <div className="font-medium">Date of Birth</div>
+                      <div className="text-gray-500">April 15, 1998</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Mail size={20} className="text-primary mt-1" />
+                    <div>
+                      <div className="font-medium">Email</div>
+                      <a href="mailto:mohamed.hesham@example.com" className="text-primary hover:underline">
+                        mohamed.hesham@example.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Phone size={20} className="text-primary mt-1" />
+                    <div>
+                      <div className="font-medium">Phone</div>
+                      <a href="tel:+201234567890" className="text-primary hover:underline">
+                        +20 123 456 7890
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Linkedin size={20} className="text-primary mt-1" />
+                    <div>
+                      <div className="font-medium">LinkedIn</div>
+                      <a href="https://linkedin.com/in/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        linkedin.com/in/mohamed-hesham
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Details</h3>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                  <div>
+                    <div className="font-medium">Languages</div>
+                    <div className="text-gray-500">Arabic (Native), English (Fluent)</div>
+                  </div>
+                  
+                  <div>
+                    <div className="font-medium">Nationality</div>
+                    <div className="text-gray-500">Egyptian</div>
+                  </div>
+                  
+                  <div>
+                    <div className="font-medium">Location</div>
+                    <div className="text-gray-500">Cairo, Egypt</div>
+                  </div>
+                  
+                  <div>
+                    <div className="font-medium">Availability</div>
+                    <div className="text-gray-500">Full-time, Freelance</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
