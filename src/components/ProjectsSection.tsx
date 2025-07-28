@@ -92,7 +92,7 @@ const ProjectsSection = () => {
                 Dashboards
               </TabsTrigger>
               <TabsTrigger value="graphics" onClick={() => setActiveCategory('graphics')}>
-                Analysis
+                Notebooks
               </TabsTrigger>
               <TabsTrigger value="website" onClick={() => setActiveCategory('website')}>
                 Reporting
