@@ -20,8 +20,8 @@ const projects: Project[] = [
     title: "Amazon Sales Dashboard",
     description: "Interactive Excel dashboard analyzing Amazon's sales performance, trends, top-performing products, and regional distribution to optimize inventory and marketing strategies.",
     category: "design",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    link: "#"
+    image: "/lovable-uploads/423f6d28-7a19-417a-b39e-029492b64b69.png",
+    link: "https://github.com/moohamed-hesham/Amazone_Sales_Analysis"
   },
   {
     id: 2,
