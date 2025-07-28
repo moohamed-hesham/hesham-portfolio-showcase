@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
+import mohamedPortrait from '@/assets/mohamed-portrait.jpg';
 
 const HeroSection = () => {
   return (
@@ -31,7 +32,7 @@ const HeroSection = () => {
           <div className="flex-1 relative">
             <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-full bg-gradient-to-br from-primary/10 to-primary/30 border-8 border-white shadow-lg animate-scale-in">
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MzQ3NzEyMQ&ixlib=rb-4.0.3&q=80&w=500" 
+                src={mohamedPortrait} 
                 alt="Mohamed Hesham Portrait" 
                 className="w-full h-full object-cover opacity-80"
               />
