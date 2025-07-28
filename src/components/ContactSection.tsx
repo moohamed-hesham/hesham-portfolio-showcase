@@ -77,9 +77,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <div className="font-medium">Email Address</div>
-                      <a href="mailto:mohamed.hesham@example.com" className="text-primary hover:underline">
-                        mohamed.hesham@example.com
-                      </a>
+                      <a href="mailto:mohamed.hesham@example.com" className="text-primary hover:underline">mohishamwork@gmail.com</a>
                     </div>
                   </div>
                   
@@ -89,9 +87,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <div className="font-medium">Languages</div>
-                      <div className="text-gray-600">
-                        Arabic (Native), English (Fluent)
-                      </div>
+                      <div className="text-gray-600">Arabic (Native), English (Conversational)</div>
                     </div>
                   </div>
                 </div>
@@ -108,9 +104,7 @@ const ContactSection = () => {
                   <a href="https://github.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#333] hover:bg-[#333]/90 text-white p-3 rounded-full transition-colors">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a href="https://twitter.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#1DA1F2] hover:bg-[#1DA1F2]/90 text-white p-3 rounded-full transition-colors">
-                    <Twitter className="h-6 w-6" />
-                  </a>
+                  
                 </div>
                 
                 <div className="mt-8">
@@ -122,9 +116,7 @@ const ContactSection = () => {
                     <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
                       Freelance Projects
                     </span>
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-                      Consulting
-                    </span>
+                    
                   </div>
                 </div>
               </CardContent>
