@@ -89,9 +89,7 @@ const AboutSection = () => {
                     <Phone size={20} className="text-primary mt-1" />
                     <div>
                       <div className="font-medium">Phone</div>
-                      <a href="tel:+201234567890" className="text-primary hover:underline">
-                        +20 123 456 7890
-                      </a>
+                      <a href="tel:+201234567890" className="text-primary hover:underline">+20 1099383972</a>
                     </div>
                   </div>
                   
