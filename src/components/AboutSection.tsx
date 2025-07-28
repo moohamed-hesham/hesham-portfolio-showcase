@@ -71,7 +71,7 @@ const AboutSection = () => {
                     <Calendar size={20} className="text-primary mt-1" />
                     <div>
                       <div className="font-medium">Date of Birth</div>
-                      <div className="text-gray-500">oct 24 2003</div>
+                      <div className="text-gray-500">October 24, 2003</div>
                     </div>
                   </div>
                   
