@@ -9,7 +9,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  category: 'design' | 'graphics' | 'website';
+  category: 'design' | 'graphics' | 'website' | 'dashboard';
   image: string;
   link: string;
 }
@@ -19,7 +19,7 @@ const projects: Project[] = [
     id: 1,
     title: "Amazon Sales Dashboard",
     description: "Interactive Excel dashboard analyzing Amazon's sales performance, trends, top-performing products, and regional distribution to optimize inventory and marketing strategies.",
-    category: "design",
+    category: "dashboard",
     image: "/lovable-uploads/e98db284-65ef-4249-b116-8d8b81839770.png",
     link: "https://github.com/moohamed-hesham/Amazone_Sales_Analysis"
   },
