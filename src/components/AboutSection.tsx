@@ -44,18 +44,6 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <div className="pt-4">
-              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                <Award size={24} className="text-primary" />
-                <span>Achievements</span>
-              </h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                <li>Reduced reporting time by 40% through process automation</li>
-                <li>Identified $150K in potential savings through data analysis</li>
-                <li>Improved sales forecast accuracy by 25%</li>
-                <li>Recognized as Top Analyst Q2 2023</li>
-              </ul>
-            </div>
           </div>
           
           <div className="grid gap-6">
