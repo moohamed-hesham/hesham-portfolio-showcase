@@ -1,14 +1,11 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Github, Linkedin, Mail, MessageSquare, Phone, Twitter } from 'lucide-react';
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-20 bg-white">
+  return <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="section-title">Get In Touch</h2>
@@ -27,22 +24,13 @@ const ContactSection = () => {
                     <label htmlFor="name" className="text-sm font-medium">
                       Your Name
                     </label>
-                    <Input
-                      id="name"
-                      placeholder="John Doe"
-                      required
-                    />
+                    <Input id="name" placeholder="John Doe" required />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Your Email
                     </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      required
-                    />
+                    <Input id="email" type="email" placeholder="john@example.com" required />
                   </div>
                 </div>
                 
@@ -50,23 +38,14 @@ const ContactSection = () => {
                   <label htmlFor="subject" className="text-sm font-medium">
                     Subject
                   </label>
-                  <Input
-                    id="subject"
-                    placeholder="Project Discussion"
-                    required
-                  />
+                  <Input id="subject" placeholder="Project Discussion" required />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
                     Message
                   </label>
-                  <Textarea
-                    id="message"
-                    placeholder="I'd like to discuss a potential project..."
-                    rows={5}
-                    required
-                  />
+                  <Textarea id="message" placeholder="I'd like to discuss a potential project..." rows={5} required />
                 </div>
                 
                 <Button type="submit" className="w-full">
@@ -87,9 +66,8 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <div className="font-medium">Phone Number</div>
-                      <a href="tel:+201234567890" className="text-primary hover:underline">
-                        +20 123 456 7890
-                      </a>
+                      <a href="tel:+201234567890" className="text-primary hover:underline">+20 1099383972
+                    </a>
                     </div>
                   </div>
                   
@@ -124,28 +102,13 @@ const ContactSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
                 <div className="flex flex-wrap gap-4">
-                  <a 
-                    href="https://linkedin.com/in/mohamed-hesham" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#0077b5] hover:bg-[#0077b5]/90 text-white p-3 rounded-full transition-colors"
-                  >
+                  <a href="https://linkedin.com/in/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#0077b5] hover:bg-[#0077b5]/90 text-white p-3 rounded-full transition-colors">
                     <Linkedin className="h-6 w-6" />
                   </a>
-                  <a 
-                    href="https://github.com/mohamed-hesham" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#333] hover:bg-[#333]/90 text-white p-3 rounded-full transition-colors"
-                  >
+                  <a href="https://github.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#333] hover:bg-[#333]/90 text-white p-3 rounded-full transition-colors">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a 
-                    href="https://twitter.com/mohamed-hesham" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#1DA1F2] hover:bg-[#1DA1F2]/90 text-white p-3 rounded-full transition-colors"
-                  >
+                  <a href="https://twitter.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#1DA1F2] hover:bg-[#1DA1F2]/90 text-white p-3 rounded-full transition-colors">
                     <Twitter className="h-6 w-6" />
                   </a>
                 </div>
@@ -169,8 +132,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
