@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "Amazon Sales Dashboard",
     description: "Interactive Excel dashboard analyzing Amazon's sales performance, trends, top-performing products, and regional distribution to optimize inventory and marketing strategies.",
     category: "design",
-    image: "/lovable-uploads/423f6d28-7a19-417a-b39e-029492b64b69.png",
+    image: "/lovable-uploads/e98db284-65ef-4249-b116-8d8b81839770.png",
     link: "https://github.com/moohamed-hesham/Amazone_Sales_Analysis"
   },
   {
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
                       alt={project.title} 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <div className="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <Button variant="outline" className="text-white border-white hover:bg-white/20" asChild>
                         <a href={project.link} className="flex items-center gap-2">
                           <Link size={16} />
