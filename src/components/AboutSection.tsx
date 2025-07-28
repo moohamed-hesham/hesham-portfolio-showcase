@@ -35,9 +35,10 @@ const AboutSection = () => {
               <div className="space-y-4">
                 <Card>
                   <CardContent className="p-4">
-                    <div className="font-medium">B.Sc in Computer Science</div>
-                    <div className="text-gray-500">Faculty of Electronic Engineering, Menoufia University</div>
-                    <div className="text-gray-500">GPA: 3.75</div>
+                    <div className="font-medium">Bachelor of Science in Computer Science</div>
+                    <div className="text-gray-600 mt-1">Faculty of Electronic Engineering</div>
+                    <div className="text-gray-600">Menoufia University</div>
+                    <div className="text-primary font-medium mt-2">GPA: 3.75/4.0</div>
                   </CardContent>
                 </Card>
               </div>
