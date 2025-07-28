@@ -108,7 +108,7 @@ const AboutSection = () => {
                 <div className="grid grid-cols-2 gap-x-4 gap-y-3">
                   <div>
                     <div className="font-medium">Languages</div>
-                    <div className="text-gray-500">Arabic (Native), English (Fluent)</div>
+                    <div className="text-gray-500">Arabic (Native), English (Conversational)</div>
                   </div>
                   
                   <div>
