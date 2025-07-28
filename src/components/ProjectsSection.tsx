@@ -89,13 +89,13 @@ const ProjectsSection = () => {
                 All Projects
               </TabsTrigger>
               <TabsTrigger value="design" onClick={() => setActiveCategory('design')}>
-                Design
+                Dashboards
               </TabsTrigger>
               <TabsTrigger value="graphics" onClick={() => setActiveCategory('graphics')}>
-                Graphic Arts
+                Analysis
               </TabsTrigger>
               <TabsTrigger value="website" onClick={() => setActiveCategory('website')}>
-                Websites
+                Reporting
               </TabsTrigger>
             </TabsList>
           </div>
