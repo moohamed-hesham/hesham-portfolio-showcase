@@ -34,7 +34,8 @@ const HeroSection = () => {
               <img 
                 src="/lovable-uploads/dd98c1b7-d166-4e48-8c4d-b0aa68c993a6.png" 
                 alt="Mohamed Hesham Portrait" 
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover opacity-90"
+                style={{ filter: 'brightness(1.2) contrast(1.1) saturate(1.1)' }}
               />
             </div>
             <div className="absolute -bottom-5 -right-5 bg-white p-3 rounded-lg shadow-lg animate-scale-in delay-300">
