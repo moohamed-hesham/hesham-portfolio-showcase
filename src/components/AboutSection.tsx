@@ -97,8 +97,8 @@ const AboutSection = () => {
                     <Linkedin size={20} className="text-primary mt-1" />
                     <div>
                       <div className="font-medium">LinkedIn</div>
-                      <a href="https://linkedin.com/in/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                        linkedin.com/in/mohamed-hesham
+                      <a href="https://www.linkedin.com/in/moohamed-hesham/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        linkedin.com/in/moohamed-hesham
                       </a>
                     </div>
                   </div>
