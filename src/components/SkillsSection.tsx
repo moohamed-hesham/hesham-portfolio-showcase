@@ -28,13 +28,6 @@ const SkillCard = ({ icon, title, description, progress }: SkillCardProps) => {
           </div>
           <h3 className="text-xl font-semibold">{title}</h3>
           <p className="text-gray-600">{description}</p>
-          <div className="pt-2">
-            <div className="flex justify-between mb-1 text-sm">
-              <span>Proficiency</span>
-              <span>{progress}%</span>
-            </div>
-            <Progress value={value} className="h-2" />
-          </div>
         </div>
       </CardContent>
     </Card>
