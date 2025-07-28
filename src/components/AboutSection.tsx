@@ -79,8 +79,8 @@ const AboutSection = () => {
                     <Mail size={20} className="text-primary mt-1" />
                     <div>
                       <div className="font-medium">Email</div>
-                      <a href="mailto:mohamed.hesham@example.com" className="text-primary hover:underline">
-                        mohamed.hesham@example.com
+                      <a href="mailto:mohishamwork@gmail.com" className="text-primary hover:underline">
+                        mohishamwork@gmail.com
                       </a>
                     </div>
                   </div>
