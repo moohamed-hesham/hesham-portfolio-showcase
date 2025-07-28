@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Mail, Phone, Linkedin, User, Award, Book } from 'lucide-react';
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 bg-accent/30">
+  return <section id="about" className="py-20 bg-accent/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="section-title">About Me</h2>
@@ -74,7 +71,7 @@ const AboutSection = () => {
                     <Calendar size={20} className="text-primary mt-1" />
                     <div>
                       <div className="font-medium">Date of Birth</div>
-                      <div className="text-gray-500">April 15, 1998</div>
+                      <div className="text-gray-500">oct 24 2003</div>
                     </div>
                   </div>
                   
@@ -140,8 +137,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
