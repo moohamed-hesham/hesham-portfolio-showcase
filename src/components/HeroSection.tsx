@@ -18,7 +18,7 @@ const HeroSection = () => {
                 <a href="#contact">Hire Me</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="gap-2">
-                <a href="#cv" download>
+                <a href="https://drive.google.com/uc?export=download&id=14s72kmLaQoeZ-B2pOhgr5J8Xx_t4XcOB" download="Mohamed_Hesham_CV.pdf">
                   <Download size={18} />
                   <span>Download CV</span>
                 </a>
