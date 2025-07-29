@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "Azure Cloud Migration, E-commerce Analytics",
     description: "Migrated and secured an on-premises SQL Server database to Azure SQL Database. Connected Power BI to Azure SQL using DirectQuery and designed interactive dashboards covering sales performance, customer segmentation, product analytics and returned orders. Leveraged Azure Machine Learning (AutoML) for sales forecasting and customer churn prediction.",
     category: "dashboard",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    image: "/lovable-uploads/a1ec013e-16cf-49b0-a095-a9667c3871df.png",
     link: "https://github.com/moohamed-hesham/Azure-Cloud-Migration-E-commerce-Analytics"
   },
   {
