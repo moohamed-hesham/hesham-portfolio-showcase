@@ -98,7 +98,7 @@ const ContactSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://linkedin.com/in/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#0077b5] hover:bg-[#0077b5]/90 text-white p-3 rounded-full transition-colors">
+                  <a href="https://www.linkedin.com/in/moohamed-hesham/" target="_blank" rel="noopener noreferrer" className="bg-[#0077b5] hover:bg-[#0077b5]/90 text-white p-3 rounded-full transition-colors">
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a href="https://github.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#333] hover:bg-[#333]/90 text-white p-3 rounded-full transition-colors">
