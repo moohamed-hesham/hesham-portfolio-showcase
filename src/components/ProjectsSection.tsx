@@ -104,7 +104,7 @@ const ProjectsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProjects.map((project) => (
                 <Card key={project.id} className="project-card overflow-hidden group">
-                  <div className="relative overflow-hidden h-64">
+                  <div className="relative overflow-hidden h-48">
                     <img 
                       src={project.image} 
                       alt={project.title} 
