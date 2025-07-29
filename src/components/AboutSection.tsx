@@ -49,16 +49,8 @@ const AboutSection = () => {
           <div className="grid gap-6">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-6">Personal Information</h3>
+                <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Calendar size={20} className="text-primary mt-1" />
-                    <div>
-                      <div className="font-medium">Date of Birth</div>
-                      <div className="text-gray-500">October 24, 2003</div>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-start gap-3">
                     <Mail size={20} className="text-primary mt-1" />
                     <div>
@@ -66,14 +58,6 @@ const AboutSection = () => {
                       <a href="mailto:mohishamwork@gmail.com" className="text-primary hover:underline">
                         mohishamwork@gmail.com
                       </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Phone size={20} className="text-primary mt-1" />
-                    <div>
-                      <div className="font-medium">Phone</div>
-                      <a href="tel:+201234567890" className="text-primary hover:underline">+20 1099383972</a>
                     </div>
                   </div>
                   
