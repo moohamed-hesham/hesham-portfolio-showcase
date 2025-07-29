@@ -47,22 +47,6 @@ const projects: Project[] = [
     image: "/lovable-uploads/744225e5-06eb-4bbc-a8e8-eec621b64bc8.png",
     link: "https://public.tableau.com/app/profile/mohamed.hesham8394/viz/project_17231195924280/OverviewDashboard?publish=yes"
   },
-  {
-    id: 5,
-    title: "Profit Margin Analysis",
-    description: "Detailed breakdown of product profitability using advanced statistical methods.",
-    category: "graphics",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    link: "#"
-  },
-  {
-    id: 6,
-    title: "E-commerce Data Portal",
-    description: "Web-based dashboard for real-time analytics of e-commerce metrics and KPIs.",
-    category: "website",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80",
-    link: "#"
-  },
 ];
 
 const ProjectsSection = () => {
