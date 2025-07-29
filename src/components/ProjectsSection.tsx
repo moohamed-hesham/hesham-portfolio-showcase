@@ -44,7 +44,7 @@ const projects: Project[] = [
     title: "Retail Sales Analysis Dashboard (Tableau)",
     description: "Built an interactive dashboard using Tableau to analyze historical sales and profit trends for a fictional multi-category retail store. Visualized key metrics, including regional performance, product category profitability, and time-based sales patterns to support business decision-making.",
     category: "dashboard",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    image: "/lovable-uploads/744225e5-06eb-4bbc-a8e8-eec621b64bc8.png",
     link: "https://public.tableau.com/app/profile/mohamed.hesham8394/viz/project_17231195924280/OverviewDashboard?publish=yes"
   },
   {
