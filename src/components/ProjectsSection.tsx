@@ -28,7 +28,7 @@ const projects: Project[] = [
     title: "Telecom Customer Churn Analysis",
     description: "Developed an interactive Power BI dashboard to analyze customer churn rates, segmentation, and key influencing factors. Accessed data via OneDrive for seamless collaboration and provided strategic recommendations to mitigate churn.",
     category: "dashboard",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
+    image: "/lovable-uploads/9b2e63eb-e331-4c22-bf48-89becaf3b360.png",
     link: "https://github.com/moohamed-hesham/Telecom-Customer-Churn-Analysis"
   },
   {
