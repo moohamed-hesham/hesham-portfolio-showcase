@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Mail, Phone, Linkedin, User, Award, Book } from 'lucide-react';
+import { Calendar, Mail, Phone, Linkedin, User, Award, Book, Github } from 'lucide-react';
 const AboutSection = () => {
   return <section id="about" className="py-20 bg-accent/30">
       <div className="container mx-auto px-4 md:px-6">
@@ -68,6 +68,16 @@ const AboutSection = () => {
                       <div className="font-medium">LinkedIn</div>
                       <a href="https://www.linkedin.com/in/moohamed-hesham/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                         linkedin.com/in/moohamed-hesham
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Github size={20} className="text-primary mt-1" />
+                    <div>
+                      <div className="font-medium">GitHub</div>
+                      <a href="https://github.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        github.com/mohamed-hesham
                       </a>
                     </div>
                   </div>
