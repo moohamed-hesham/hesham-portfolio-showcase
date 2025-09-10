@@ -22,7 +22,7 @@ const Header = () => {
           
           <div className="flex items-center gap-4">
             <Button asChild variant="outline" size="sm" className="hidden md:flex gap-2">
-              <a href="https://drive.google.com/uc?export=download&id=14s72kmLaQoeZ-B2pOhgr5J8Xx_t4XcOB" download="Mohamed_Hesham_CV.pdf">
+              <a href="https://drive.google.com/uc?export=download&id=1Sg-ZC9p5_dmt4n1dNv8khuGdZAK5Ymxv" download="Mohamed_Hesham_CV.pdf">
                 <Download size={16} />
                 <span>Resume</span>
               </a>
