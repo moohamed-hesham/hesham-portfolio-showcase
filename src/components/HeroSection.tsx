@@ -26,7 +26,7 @@ const HeroSection = () => {
           
           <div className="flex-1 relative">
             <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-full bg-gradient-to-br from-primary/10 to-primary/30 border-8 border-white shadow-lg animate-scale-in">
-              <img src="/lovable-uploads/8d9fb124-12f5-42c9-b172-02c3ab3261c9.png" alt="Mohamed Hesham Portrait" className="w-full h-full object-cover object-center" style={{
+              <img src="/lovable-uploads/d8423e38-b1ae-4394-a9fd-35a43eed57bd.png" alt="Mohamed Hesham Portrait" className="w-full h-full object-cover object-center" style={{
               filter: 'brightness(1.1) contrast(1.08) saturate(0.95)',
               objectPosition: 'center 10%',
               transform: 'scale(1.15)'
