@@ -5,10 +5,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Github, Linkedin, Mail, MessageSquare, Phone, Twitter } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 const ContactSection = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,15 +26,6 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!webhookUrl) {
-      toast({
-        title: "Webhook Required",
-        description: "Please enter your Zapier webhook URL to send messages to mohishamwork@gmail.com",
-        variant: "destructive",
-      });
-      return;
-    }
 
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
@@ -48,26 +39,23 @@ const ContactSection = () => {
     setIsLoading(true);
 
     try {
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
+      // Using EmailJS to send email directly
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // You'll need to replace this with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // You'll need to replace this with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          recipient: "mohishamwork@gmail.com",
-          timestamp: new Date().toISOString(),
-          triggered_from: window.location.origin,
-        }),
-      });
+          to_email: 'mohishamwork@gmail.com',
+        },
+        'YOUR_PUBLIC_KEY' // You'll need to replace this with your EmailJS public key
+      );
 
       toast({
         title: "Message Sent!",
-        description: "Your message has been sent to mohishamwork@gmail.com. I'll get back to you soon!",
+        description: "Your message has been sent successfully. I'll get back to you soon!",
       });
 
       // Reset form
@@ -102,22 +90,6 @@ const ContactSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <label htmlFor="webhookUrl" className="text-sm font-medium text-primary">
-                      Zapier Webhook URL (Required to send to mohishamwork@gmail.com)
-                    </label>
-                    <Input 
-                      id="webhookUrl" 
-                      type="url"
-                      placeholder="https://hooks.zapier.com/hooks/catch/..." 
-                      value={webhookUrl}
-                      onChange={(e) => setWebhookUrl(e.target.value)}
-                      className="border-primary/20"
-                    />
-                    <p className="text-xs text-gray-500">
-                      Create a Zap with a webhook trigger that sends email to mohishamwork@gmail.com
-                    </p>
-                  </div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
