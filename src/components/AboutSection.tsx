@@ -76,8 +76,8 @@ const AboutSection = () => {
                     <Github size={20} className="text-primary mt-1" />
                     <div>
                       <div className="font-medium">GitHub</div>
-                      <a href="https://github.com/mohamed-hesham" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                        github.com/mohamed-hesham
+                      <a href="https://github.com/moohamed-hesham" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        github.com/moohamed-hesham
                       </a>
                     </div>
                   </div>
