@@ -7,7 +7,9 @@ import { Github, Linkedin, Mail, MessageSquare, Phone, Twitter } from 'lucide-re
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -15,47 +17,44 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
+    const {
+      id,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [id]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
         title: "Missing Information",
         description: "Please fill in all fields before sending your message.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
-
     setIsLoading(true);
-
     try {
       // Using EmailJS to send email directly
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to replace this with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // You'll need to replace this with your EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: 'mohishamwork@gmail.com',
-        },
-        'YOUR_PUBLIC_KEY' // You'll need to replace this with your EmailJS public key
+      await emailjs.send('YOUR_SERVICE_ID',
+      // You'll need to replace this with your EmailJS service ID
+      'YOUR_TEMPLATE_ID',
+      // You'll need to replace this with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'mohishamwork@gmail.com'
+      }, 'YOUR_PUBLIC_KEY' // You'll need to replace this with your EmailJS public key
       );
-
       toast({
         title: "Message Sent!",
-        description: "Your message has been sent successfully. I'll get back to you soon!",
+        description: "Your message has been sent successfully. I'll get back to you soon!"
       });
 
       // Reset form
@@ -70,7 +69,7 @@ const ContactSection = () => {
       toast({
         title: "Error",
         description: "Failed to send your message. Please try again or contact me directly.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsLoading(false);
@@ -80,9 +79,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="section-title">Get In Touch</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
-          </p>
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4">Connect with me and let's discuss your data, goals, and any specific analysis requirements you have in mind to create a solution tailored to your needs.</p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -96,26 +93,13 @@ const ContactSection = () => {
                       <label htmlFor="name" className="text-sm font-medium">
                         Your Name
                       </label>
-                      <Input 
-                        id="name" 
-                        placeholder="John Doe" 
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required 
-                      />
+                      <Input id="name" placeholder="John Doe" value={formData.name} onChange={handleInputChange} required />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
                         Your Email
                       </label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="john@example.com" 
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required 
-                      />
+                      <Input id="email" type="email" placeholder="john@example.com" value={formData.email} onChange={handleInputChange} required />
                     </div>
                   </div>
                   
@@ -123,27 +107,14 @@ const ContactSection = () => {
                     <label htmlFor="subject" className="text-sm font-medium">
                       Subject
                     </label>
-                    <Input 
-                      id="subject" 
-                      placeholder="Project Discussion" 
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required 
-                    />
+                    <Input id="subject" placeholder="Project Discussion" value={formData.subject} onChange={handleInputChange} required />
                   </div>
                   
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message
                     </label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="I'd like to discuss a potential project..." 
-                      rows={5} 
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required 
-                    />
+                    <Textarea id="message" placeholder="I'd like to discuss a potential project..." rows={5} value={formData.message} onChange={handleInputChange} required />
                   </div>
                   
                   <Button type="submit" className="w-full" disabled={isLoading}>
