@@ -10,9 +10,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               Hi, I'm <span className="text-primary">Mohamed Hesham</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              A highly motivated Data Analyst with a strong passion for sales and marketing.
-            </p>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8">A highly motivated Data Analyst with a strong passion for E-commerce and Sales.</p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <a href="#contact">Hire Me</a>
