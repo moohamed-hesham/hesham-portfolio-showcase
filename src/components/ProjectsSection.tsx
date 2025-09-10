@@ -110,10 +110,10 @@ const ProjectsSection = () => {
                   </div>
                   <CardContent className="p-5">
                     <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category}
+                      {project.category} <span className="text-gray-500">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
-                      {project.title} <span className="text-sm text-gray-500">{project.date}</span>
+                      {project.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{project.description}</p>
                   </CardContent>
@@ -143,10 +143,10 @@ const ProjectsSection = () => {
                   </div>
                   <CardContent className="p-5">
                     <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category}
+                      {project.category} <span className="text-gray-500">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
-                      {project.title} <span className="text-sm text-gray-500">{project.date}</span>
+                      {project.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{project.description}</p>
                   </CardContent>
@@ -176,10 +176,10 @@ const ProjectsSection = () => {
                   </div>
                   <CardContent className="p-5">
                     <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category}
+                      {project.category} <span className="text-gray-500">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
-                      {project.title} <span className="text-sm text-gray-500">{project.date}</span>
+                      {project.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{project.description}</p>
                   </CardContent>
@@ -209,10 +209,10 @@ const ProjectsSection = () => {
                   </div>
                   <CardContent className="p-5">
                     <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category}
+                      {project.category} <span className="text-gray-500">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
-                      {project.title} <span className="text-sm text-gray-500">{project.date}</span>
+                      {project.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{project.description}</p>
                   </CardContent>
