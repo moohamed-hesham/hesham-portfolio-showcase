@@ -30,7 +30,8 @@ const HeroSection = () => {
             <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-full bg-gradient-to-br from-primary/10 to-primary/30 border-8 border-white shadow-lg animate-scale-in">
               <img src="/lovable-uploads/8d9fb124-12f5-42c9-b172-02c3ab3261c9.png" alt="Mohamed Hesham Portrait" className="w-full h-full object-cover object-center" style={{
               filter: 'brightness(1.1) contrast(1.08) saturate(0.95)',
-              objectPosition: 'center 15%'
+              objectPosition: 'center 10%',
+              transform: 'scale(1.15)'
             }} />
             </div>
             <div className="absolute -bottom-5 -right-5 bg-white p-3 rounded-lg shadow-lg animate-scale-in delay-300">
