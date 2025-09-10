@@ -7,8 +7,7 @@ const AboutSection = () => {
         <div className="text-center mb-12">
           <h2 className="section-title">About Me</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            Get to know more about my background, skills, and what drives me in the world of data analysis.
-          </p>
+        </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -17,11 +16,7 @@ const AboutSection = () => {
               <User size={24} className="text-primary" />
               <span>My Background</span>
             </h3>
-            <p className="text-gray-700 leading-relaxed">
-              I'm a highly motivated Data Analyst with a strong passion for sales and marketing. 
-              My analytical approach and attention to detail allow me to transform complex data into 
-              meaningful insights that drive business decisions.
-            </p>
+            <p className="text-gray-700 leading-relaxed">I'm a highly motivated Data Analyst with a strong passion for E-commerce and Sales. My analytical approach and attention to detail allow me to transform complex data into meaningful insights that drive business decisions.</p>
             <p className="text-gray-700 leading-relaxed">
               With expertise in Excel, SQL, Python, and Power BI, I specialize in descriptive analysis 
               and creating impactful data visualizations that tell compelling stories.
@@ -95,8 +90,10 @@ const AboutSection = () => {
                   </div>
                   
                   <div>
-                    <div className="font-medium">Nationality</div>
-                    <div className="text-gray-500">Egyptian</div>
+                    <div className="font-medium">
+                  </div>
+                    <div className="text-gray-500">
+                  </div>
                   </div>
                   
                   <div>
