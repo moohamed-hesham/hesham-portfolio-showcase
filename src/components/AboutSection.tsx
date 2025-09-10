@@ -38,7 +38,8 @@ const AboutSection = () => {
                     <div className="font-medium">Bachelor of Engineering in Computer Science</div>
                     <div className="text-gray-600 mt-1">Faculty of Electronic Engineering</div>
                     <div className="text-gray-600">Menoufia University</div>
-                    <div className="text-primary font-medium mt-2">GPA: 3.75/4.0</div>
+                    <div className="text-primary font-medium mt-2">
+                  </div>
                   </CardContent>
                 </Card>
               </div>
