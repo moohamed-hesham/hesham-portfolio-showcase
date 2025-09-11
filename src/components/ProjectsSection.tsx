@@ -100,7 +100,7 @@ const ProjectsSection = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="outline" className="text-white border-white hover:bg-white/20" asChild>
+                      <Button variant="ghost" className="text-white border border-white hover:bg-transparent" asChild>
                         <a href={project.link} className="flex items-center gap-2">
                           <Link size={16} />
                           <span>View Project</span>
