@@ -39,7 +39,7 @@ const SkillCard = ({ icon, title, description, progress }: SkillCardProps) => {
         <CardContent className="p-0 h-full">
           <div className="p-6 space-y-4 h-full flex flex-col">
             <motion.div 
-              className="bg-primary/10 p-3 rounded-lg inline-flex group-hover:bg-primary/20 transition-colors"
+              className="bg-primary/10 p-2 rounded-lg inline-flex group-hover:bg-primary/20 transition-colors"
               whileHover={{ 
                 rotate: 360,
                 transition: { duration: 0.5 }
