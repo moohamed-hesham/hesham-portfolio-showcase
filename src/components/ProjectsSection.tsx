@@ -109,8 +109,11 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   <CardContent className="p-5">
-                    <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category} <span className="text-gray-500">{project.date}</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <div className="uppercase text-xs font-semibold text-primary">
+                        {project.category}
+                      </div>
+                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
                       {project.title}
@@ -142,8 +145,11 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   <CardContent className="p-5">
-                    <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category} <span className="text-gray-500">{project.date}</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <div className="uppercase text-xs font-semibold text-primary">
+                        {project.category}
+                      </div>
+                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
                       {project.title}
@@ -175,8 +181,11 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   <CardContent className="p-5">
-                    <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category} <span className="text-gray-500">{project.date}</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <div className="uppercase text-xs font-semibold text-primary">
+                        {project.category}
+                      </div>
+                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
                       {project.title}
@@ -208,8 +217,11 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   <CardContent className="p-5">
-                    <div className="uppercase text-xs font-semibold text-primary mb-2">
-                      {project.category} <span className="text-gray-500">{project.date}</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <div className="uppercase text-xs font-semibold text-primary">
+                        {project.category}
+                      </div>
+                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
                       {project.title}
