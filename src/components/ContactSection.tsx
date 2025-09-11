@@ -5,11 +5,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Github, Linkedin, Mail, MessageSquare, Phone, Twitter } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { motion, useInView } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 const ContactSection = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -75,15 +76,33 @@ const ContactSection = () => {
       setIsLoading(false);
     }
   };
-  return <section id="contact" className="py-20 bg-white">
+  return (
+    <motion.section 
+      ref={ref}
+      id="contact" 
+      className="py-20 bg-white"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="section-title">Get In Touch</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">Connect with me and let's discuss your data, goals, and any specific analysis requirements you have in mind to create a solution tailored to your needs.</p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -117,14 +136,25 @@ const ContactSection = () => {
                     <Textarea id="message" placeholder="I'd like to discuss a potential project..." rows={5} value={formData.message} onChange={handleInputChange} required />
                   </div>
                   
-                  <Button type="submit" className="w-full" disabled={isLoading}>
-                    {isLoading ? 'Sending...' : 'Send Message'}
-                  </Button>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Button type="submit" className="w-full hover:shadow-lg transition-all duration-300" disabled={isLoading}>
+                      {isLoading ? 'Sending...' : 'Send Message'}
+                    </Button>
+                  </motion.div>
                 </form>
               </CardContent>
             </Card>
+          </motion.div>
           
-          <div className="space-y-6">
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
@@ -163,17 +193,34 @@ const ContactSection = () => {
               </CardContent>
             </Card>
             
-            <Card>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://www.linkedin.com/in/moohamed-hesham/" target="_blank" rel="noopener noreferrer" className="bg-[#0077b5] hover:bg-[#0077b5]/90 text-white p-3 rounded-full transition-colors">
+                  <motion.a 
+                    href="https://www.linkedin.com/in/moohamed-hesham/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-[#0077b5] hover:bg-[#0077b5]/90 text-white p-3 rounded-full transition-colors"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Linkedin className="h-6 w-6" />
-                  </a>
-                  <a href="https://github.com/moohamed-hesham" target="_blank" rel="noopener noreferrer" className="bg-[#333] hover:bg-[#333]/90 text-white p-3 rounded-full transition-colors">
+                  </motion.a>
+                  <motion.a 
+                    href="https://github.com/moohamed-hesham" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-[#333] hover:bg-[#333]/90 text-white p-3 rounded-full transition-colors"
+                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Github className="h-6 w-6" />
-                  </a>
-                  
+                  </motion.a>
                 </div>
                 
                 <div className="mt-8">
@@ -190,9 +237,11 @@ const ContactSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>;
+    </motion.section>
+  );
 };
 export default ContactSection;

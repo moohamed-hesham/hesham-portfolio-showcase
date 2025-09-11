@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
 
 interface Project {
   id: number;
@@ -54,22 +54,86 @@ const projects: Project[] = [
   },
 ];
 
+const ProjectCard = ({ project, index, isInView }: { project: Project; index: number; isInView: boolean }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+    whileHover={{ y: -8 }}
+  >
+    <Card className="project-card overflow-hidden group h-full shadow-lg hover:shadow-xl transition-all duration-300">
+      <div className="relative overflow-hidden h-48">
+        <motion.img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+        />
+        <motion.div 
+          className="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button variant="ghost" className="text-white border border-white hover:bg-white/20 transition-all duration-300" asChild>
+              <a href={project.link} className="flex items-center gap-2">
+                <Link size={16} />
+                <span>View Project</span>
+              </a>
+            </Button>
+          </motion.div>
+        </motion.div>
+      </div>
+      <CardContent className="p-5">
+        <div className="flex justify-between items-center mb-2">
+          <div className="uppercase text-xs font-semibold text-primary">
+            {project.category}
+          </div>
+          <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
+        </div>
+        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+          {project.title}
+        </h3>
+        <p className="text-gray-600 text-sm">{project.description}</p>
+      </CardContent>
+    </Card>
+  </motion.div>
+);
+
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const filteredProjects = activeCategory === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <motion.section 
+      ref={ref}
+      id="projects" 
+      className="py-20 bg-gray-50"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="section-title">My Projects</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
             Explore my portfolio of data analysis and visualization projects across different domains.
           </p>
-        </div>
+        </motion.div>
         
         <Tabs defaultValue="all" className="w-full">
           <div className="flex justify-center mb-8">
@@ -91,150 +155,38 @@ const ProjectsSection = () => {
           
           <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <Card key={project.id} className="project-card overflow-hidden group">
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="ghost" className="text-white border border-white hover:bg-transparent" asChild>
-                        <a href={project.link} className="flex items-center gap-2">
-                          <Link size={16} />
-                          <span>View Project</span>
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <CardContent className="p-5">
-                    <div className="flex justify-between items-center mb-2">
-                      <div className="uppercase text-xs font-semibold text-primary">
-                        {project.category}
-                      </div>
-                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{project.description}</p>
-                  </CardContent>
-                </Card>
+              {filteredProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
               ))}
             </div>
           </TabsContent>
           
           <TabsContent value="design" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <Card key={project.id} className="project-card overflow-hidden group">
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="outline" className="text-white border-white hover:bg-white/20" asChild>
-                        <a href={project.link} className="flex items-center gap-2">
-                          <Link size={16} />
-                          <span>View Project</span>
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <CardContent className="p-5">
-                    <div className="flex justify-between items-center mb-2">
-                      <div className="uppercase text-xs font-semibold text-primary">
-                        {project.category}
-                      </div>
-                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{project.description}</p>
-                  </CardContent>
-                </Card>
+              {filteredProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
               ))}
             </div>
           </TabsContent>
           
           <TabsContent value="graphics" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <Card key={project.id} className="project-card overflow-hidden group">
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="outline" className="text-white border-white hover:bg-white/20" asChild>
-                        <a href={project.link} className="flex items-center gap-2">
-                          <Link size={16} />
-                          <span>View Project</span>
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <CardContent className="p-5">
-                    <div className="flex justify-between items-center mb-2">
-                      <div className="uppercase text-xs font-semibold text-primary">
-                        {project.category}
-                      </div>
-                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{project.description}</p>
-                  </CardContent>
-                </Card>
+              {filteredProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
               ))}
             </div>
           </TabsContent>
           
           <TabsContent value="website" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <Card key={project.id} className="project-card overflow-hidden group">
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="outline" className="text-white border-white hover:bg-white/20" asChild>
-                        <a href={project.link} className="flex items-center gap-2">
-                          <Link size={16} />
-                          <span>View Project</span>
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <CardContent className="p-5">
-                    <div className="flex justify-between items-center mb-2">
-                      <div className="uppercase text-xs font-semibold text-primary">
-                        {project.category}
-                      </div>
-                      <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{project.description}</p>
-                  </CardContent>
-                </Card>
+              {filteredProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
               ))}
             </div>
           </TabsContent>
         </Tabs>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

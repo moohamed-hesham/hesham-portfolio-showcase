@@ -1,17 +1,39 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Mail, Phone, Linkedin, User, Award, Book, Github } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
 const AboutSection = () => {
-  return <section id="about" className="py-20 bg-accent/30">
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.section 
+      ref={ref}
+      id="about" 
+      className="py-20 bg-accent/30"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="section-title">About Me</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-        </p>
-        </div>
+          </p>
+        </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
               <User size={24} className="text-primary" />
               <span>My Background</span>
@@ -28,22 +50,36 @@ const AboutSection = () => {
                 <span>Education</span>
               </h3>
               <div className="space-y-4">
-                <Card>
-                  <CardContent className="p-4">
-                    <div className="font-medium">Bachelor of Engineering in Computer Science</div>
-                    <div className="text-gray-600 mt-1">Faculty of Electronic Engineering</div>
-                    <div className="text-gray-600">Menoufia University</div>
-                    <div className="text-primary font-medium mt-2">
-                  </div>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Card className="hover:shadow-lg transition-shadow duration-300">
+                    <CardContent className="p-4">
+                      <div className="font-medium">Bachelor of Engineering in Computer Science</div>
+                      <div className="text-gray-600 mt-1">Faculty of Electronic Engineering</div>
+                      <div className="text-gray-600">Menoufia University</div>
+                      <div className="text-primary font-medium mt-2">
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               </div>
             </div>
             
-          </div>
+          </motion.div>
           
-          <div className="grid gap-6">
-            <Card>
+          <motion.div 
+            className="grid gap-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
                 <div className="space-y-4">
@@ -79,8 +115,13 @@ const AboutSection = () => {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
             
-            <Card>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Details</h3>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-3">
@@ -108,9 +149,11 @@ const AboutSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>;
+    </motion.section>
+  );
 };
 export default AboutSection;
