@@ -3,6 +3,7 @@ import React from 'react';
 import { Database, Code, ChartBar, Users, MessageSquare, PieChart } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
+import { motion, useInView } from 'framer-motion';
 
 interface SkillCardProps {
   icon: React.ReactNode;
@@ -12,25 +13,59 @@ interface SkillCardProps {
 }
 
 const SkillCard = ({ icon, title, description, progress }: SkillCardProps) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [value, setValue] = React.useState(0);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => setValue(progress), 300);
-    return () => clearTimeout(timer);
-  }, [progress]);
+    if (isInView) {
+      const timer = setTimeout(() => setValue(progress), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [progress, isInView]);
 
   return (
-    <Card className="skill-card group">
-      <CardContent className="p-0">
-        <div className="p-6 space-y-4">
-          <div className="bg-primary/10 p-3 rounded-lg inline-flex group-hover:bg-primary/20 transition-colors">
-            {icon}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <Card className="skill-card group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2">
+        <CardContent className="p-0">
+          <div className="p-6 space-y-4">
+            <motion.div 
+              className="bg-primary/10 p-3 rounded-lg inline-flex group-hover:bg-primary group-hover:scale-110 transition-all duration-300"
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div
+                className="text-primary group-hover:text-white transition-colors duration-300"
+                whileHover={{ scale: 1.1 }}
+              >
+                {icon}
+              </motion.div>
+            </motion.div>
+            <motion.h3 
+              className="text-xl font-semibold group-hover:text-primary transition-colors duration-300"
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {title}
+            </motion.h3>
+            <motion.p 
+              className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              {description}
+            </motion.p>
           </div>
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-gray-600">{description}</p>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 
@@ -74,25 +109,56 @@ const SkillsSection = () => {
     },
   ];
 
+  const titleRef = React.useRef(null);
+  const isHeaderInView = useInView(titleRef, { once: true, margin: "-50px" });
+
   return (
     <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="section-title">My Skills</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+        <motion.div 
+          ref={titleRef}
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="section-title"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isHeaderInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            My Skills
+          </motion.h2>
+          <motion.p 
+            className="text-gray-600 max-w-2xl mx-auto mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             My expertise spans various data analysis techniques and tools that help me deliver valuable insights.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
-            <SkillCard 
+            <motion.div
               key={index}
-              icon={skill.icon}
-              title={skill.title}
-              description={skill.description}
-              progress={skill.progress}
-            />
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.1,
+                ease: "easeOut" 
+              }}
+            >
+              <SkillCard 
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+                progress={skill.progress}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
