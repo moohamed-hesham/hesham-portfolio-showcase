@@ -16,7 +16,7 @@ const ExperienceSection = () => {
       id: 2,
       title: "Data Analytics Trainee",
       company: "ITI (Information Technology Institute)",
-      period: "07/2024 - 08/2024",
+      period: "Jul 2024 - Aug 2024",
       location: "Egypt",
       description: "Completed intensive hands-on training in data analysis, covering real-world projects using Excel, SQL, Tableau, and Python. Gained experience in business problem-solving, storytelling with data, and working in teams under tight deadlines."
     }
