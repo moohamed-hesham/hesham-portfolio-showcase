@@ -1,8 +1,11 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MapPin, Building } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
 
 const ExperienceSection = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const experiences = [
     {
       id: 1,
@@ -23,18 +26,37 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-muted/50">
+    <motion.section 
+      ref={ref}
+      id="experience" 
+      className="py-20 bg-muted/50"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="text-4xl font-bold mb-4">Experience</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             My professional journey in data analytics and business intelligence
           </p>
-        </div>
+        </motion.div>
 
         <div className="space-y-8 max-w-4xl mx-auto">
-          {experiences.map((experience) => (
-            <Card key={experience.id} className="border-l-4 border-l-primary">
+          {experiences.map((experience, index) => (
+            <motion.div
+              key={experience.id}
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
@@ -60,10 +82,11 @@ const ExperienceSection = () => {
                 </p>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
