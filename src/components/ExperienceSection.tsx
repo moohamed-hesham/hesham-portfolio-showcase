@@ -8,7 +8,7 @@ const ExperienceSection = () => {
       id: 1,
       title: "Freelance Data Analyst",
       company: "Self-Employed",
-      period: "8/2025 to now",
+      period: "Aug 2025 to now",
       location: "Remote",
       description: "I've helped clients across various sectors turn messy data into meaningful insights. My freelance work includes creating interactive dashboards in Excel and Power BI, analyzing customer behavior, cleaning and structuring large datasets, and automating reporting tasks to save time and boost decision-making."
     },
