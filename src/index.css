@@ -7,82 +7,74 @@
 
 @layer base {
   :root {
-    /* Professional Data Analyst Blue Theme */
-    --background: 214 100% 97%; /* Light blue background */
-    --foreground: 217 33% 12%; /* Dark gray text */
+    --background: 240 10% 99%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%; /* White cards */
-    --card-foreground: 217 33% 12%; /* Dark gray text */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 217 33% 12%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 217 65% 32%; /* Deep navy blue */
-    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --primary: 246 84% 66%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 91% 60%; /* Medium blue */
-    --secondary-foreground: 0 0% 100%; /* White text on secondary */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 214 100% 97%; /* Light blue muted */
-    --muted-foreground: 217 33% 45%; /* Medium gray text */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 213 94% 68%; /* Sky blue accent */
-    --accent-foreground: 217 33% 12%; /* Dark text on accent */
+    --accent: 246 84% 96%;
+    --accent-foreground: 246 84% 36%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 214 100% 92%; /* Light blue borders */
-    --input: 0 0% 100%; /* White inputs */
-    --ring: 217 91% 60%; /* Medium blue focus ring */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 246 84% 66%;
 
     --radius: 0.75rem;
 
-    /* Professional gradients and effects */
-    --gradient-primary: linear-gradient(135deg, hsl(217, 65%, 32%), hsl(217, 91%, 60%));
-    --gradient-accent: linear-gradient(135deg, hsl(213, 94%, 68%), hsl(217, 91%, 60%));
-    --shadow-elegant: 0 10px 30px -10px hsl(217, 65%, 32% / 0.3);
-    --shadow-glow: 0 0 40px hsl(213, 94%, 68% / 0.4);
-
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 217 33% 12%;
-    --sidebar-primary: 217 65% 32%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 214 100% 97%;
-    --sidebar-accent-foreground: 217 33% 12%;
-    --sidebar-border: 214 100% 92%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark mode with blue accents */
-    --background: 217 33% 8%; /* Dark navy background */
-    --foreground: 0 0% 98%; /* Light text */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 217 33% 12%; /* Dark cards */
-    --card-foreground: 0 0% 98%; /* Light text on cards */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 217 33% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 213 94% 68%; /* Sky blue primary in dark */
-    --primary-foreground: 217 33% 12%; /* Dark text on primary */
+    --primary: 246 84% 66%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 65% 32%; /* Deep navy secondary */
-    --secondary-foreground: 0 0% 98%; /* Light text */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 33% 15%; /* Dark muted */
-    --muted-foreground: 217 33% 65%; /* Medium gray text */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217 91% 60%; /* Medium blue accent */
-    --accent-foreground: 0 0% 98%; /* Light text on accent */
+    --accent: 246 84% 26%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 20%; /* Dark borders */
-    --input: 217 33% 15%; /* Dark inputs */
-    --ring: 213 94% 68%; /* Sky blue focus ring */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 246 84% 66%;
   }
 }
 
@@ -102,7 +94,7 @@
 
 @layer components {
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4 relative inline-block text-foreground;
+    @apply text-3xl md:text-4xl font-bold mb-4 relative inline-block;
   }
 
   .section-title::after {
@@ -111,31 +103,14 @@
   }
 
   .skill-card {
-    @apply p-6 rounded-xl bg-card text-card-foreground shadow-md hover:shadow-lg transition-all duration-300 border border-border;
+    @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
   }
 
   .project-card {
-    @apply bg-card text-card-foreground rounded-xl overflow-hidden shadow-md border border-border hover:-translate-y-1 hover:shadow-lg transition-all duration-300;
+    @apply bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-1 hover:shadow-lg transition-all duration-300;
   }
 
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
-  }
-
-  /* Professional data analyst styling */
-  .data-gradient {
-    background: var(--gradient-primary);
-  }
-
-  .accent-gradient {
-    background: var(--gradient-accent);
-  }
-
-  .elegant-shadow {
-    box-shadow: var(--shadow-elegant);
-  }
-
-  .glow-effect {
-    box-shadow: var(--shadow-glow);
   }
 }
