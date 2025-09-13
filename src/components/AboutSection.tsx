@@ -83,7 +83,7 @@ const AboutSection = () => {
           duration: 0.6,
           delay: 0.5
         }}>
-            <div className="text-4xl font-bold text-primary mb-2">100%</div>
+            <div className="text-4xl font-bold text-primary mb-2">99%</div>
             <div className="text-muted-foreground">Client Satisfaction</div>
           </motion.div>
         </div>
@@ -147,7 +147,7 @@ const AboutSection = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-muted-foreground">Certified in Google Analytics and Microsoft Power BI</p>
+                  <p className="text-muted-foreground">Exploring business analytics and how data drives decision-making</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
