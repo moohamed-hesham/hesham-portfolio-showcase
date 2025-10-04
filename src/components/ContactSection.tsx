@@ -40,18 +40,17 @@ const ContactSection = () => {
     }
     setIsLoading(true);
     try {
-      // Using EmailJS to send email directly
-      await emailjs.send('YOUR_SERVICE_ID',
-      // You'll need to replace this with your EmailJS service ID
-      'YOUR_TEMPLATE_ID',
-      // You'll need to replace this with your EmailJS template ID
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: 'mohishamwork@gmail.com'
-      }, 'YOUR_PUBLIC_KEY' // You'll need to replace this with your EmailJS public key
+      await emailjs.send(
+        'service_d0xe52o',
+        'template_ckp624n',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'mohishamwork@gmail.com'
+        },
+        'ii7b2F_czZnOlR6d3'
       );
       toast({
         title: "Message Sent!",
