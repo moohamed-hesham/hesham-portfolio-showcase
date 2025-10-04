@@ -72,7 +72,7 @@ const ProjectCard = ({ project, index, isInView }: { project: Project; index: nu
     whileHover={{ y: -8 }}
   >
     <Card className="project-card overflow-hidden group h-full shadow-lg hover:shadow-xl transition-all duration-300">
-      <div className="relative overflow-hidden h-48">
+      <div className="relative overflow-hidden h-64">
         <motion.img 
           src={project.image} 
           alt={project.title} 
