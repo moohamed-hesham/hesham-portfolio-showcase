@@ -14,6 +14,7 @@ interface Project {
   image: string;
   link: string;
   date: string;
+  techStack: string[];
 }
 
 const projects: Project[] = [
@@ -24,7 +25,8 @@ const projects: Project[] = [
     category: "dashboard",
     image: hrDashboard,
     link: "https://github.com/moohamed-hesham/HR-Analytics-Dashoard",
-    date: "Oct 2025"
+    date: "Oct 2025",
+    techStack: ["Power BI", "HR Analytics"]
   },
   {
     id: 2,
@@ -33,7 +35,8 @@ const projects: Project[] = [
     category: "dashboard",
     image: "/lovable-uploads/a1ec013e-16cf-49b0-a095-a9667c3871df.png",
     link: "https://github.com/moohamed-hesham/Azure-Cloud-Migration-E-commerce-Analytics",
-    date: "May 2025"
+    date: "May 2025",
+    techStack: ["Power BI", "SQL Server", "Azure ML", "Azure SQL Database", "E-commerce"]
   },
   {
     id: 3,
@@ -42,7 +45,8 @@ const projects: Project[] = [
     category: "dashboard",
     image: "/lovable-uploads/9b2e63eb-e331-4c22-bf48-89becaf3b360.png",
     link: "https://github.com/moohamed-hesham/Telecom-Customer-Churn-Analysis",
-    date: "Apr 2025"
+    date: "Apr 2025",
+    techStack: ["Power BI", "Telecom"]
   },
   {
     id: 4,
@@ -51,7 +55,8 @@ const projects: Project[] = [
     category: "dashboard",
     image: "/lovable-uploads/744225e5-06eb-4bbc-a8e8-eec621b64bc8.png",
     link: "https://public.tableau.com/app/profile/mohamed.hesham8394/viz/project_17231195924280/OverviewDashboard?publish=yes",
-    date: "Aug 2024"
+    date: "Aug 2024",
+    techStack: ["Tableau", "Retail Sales"]
   },
   {
     id: 5,
@@ -60,7 +65,8 @@ const projects: Project[] = [
     category: "dashboard",
     image: "/lovable-uploads/e98db284-65ef-4249-b116-8d8b81839770.png",
     link: "https://github.com/moohamed-hesham/Amazone_Sales_Analysis",
-    date: "Jun 2024"
+    date: "Jun 2024",
+    techStack: ["Excel", "Sales"]
   },
 ];
 
@@ -108,7 +114,17 @@ const ProjectCard = ({ project, index, isInView }: { project: Project; index: nu
         <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
           {project.title}
         </h3>
-        <p className="text-gray-600 text-sm">{project.description}</p>
+        <p className="text-gray-600 text-sm mb-3">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.techStack.map((tech, index) => (
+            <span 
+              key={index}
+              className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </CardContent>
     </Card>
   </motion.div>
