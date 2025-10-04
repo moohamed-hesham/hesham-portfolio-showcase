@@ -157,9 +157,6 @@ const ProjectsSection = () => {
               <TabsTrigger value="graphics" onClick={() => setActiveCategory('graphics')}>
                 Notebooks
               </TabsTrigger>
-              <TabsTrigger value="website" onClick={() => setActiveCategory('website')}>
-                Reporting
-              </TabsTrigger>
             </TabsList>
           </div>
           
@@ -180,14 +177,6 @@ const ProjectsSection = () => {
           </TabsContent>
           
           <TabsContent value="graphics" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="website" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProjects.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
