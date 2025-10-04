@@ -58,7 +58,7 @@ const HeroSection = () => {
               <span className="text-primary">Mohamed Hesham</span>
             </motion.h1>
             <motion.div 
-              className="text-xl md:text-2xl text-gray-600 mb-2 min-h-[2em]"
+              className="text-xl md:text-2xl text-muted-foreground mb-2 min-h-[2em]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -67,7 +67,7 @@ const HeroSection = () => {
               <span className="animate-pulse">|</span>
             </motion.div>
             <motion.p 
-              className="text-lg text-gray-600 mb-8"
+              className="text-lg text-muted-foreground mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -125,7 +125,7 @@ const HeroSection = () => {
               />
             </motion.div>
             <motion.div 
-              className="absolute -bottom-5 -right-5 bg-white p-3 rounded-lg shadow-lg"
+              className="absolute -bottom-5 -right-5 bg-card p-3 rounded-lg shadow-lg border border-border"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.2 }}

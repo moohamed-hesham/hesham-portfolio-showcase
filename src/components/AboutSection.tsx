@@ -170,8 +170,8 @@ const AboutSection = () => {
                   <Card className="hover:shadow-lg transition-shadow duration-300">
                     <CardContent className="p-4">
                       <div className="font-medium">Bachelor of Engineering in Computer Science</div>
-                      <div className="text-gray-600 mt-1">Faculty of Electronic Engineering</div>
-                      <div className="text-gray-600">Menoufia University</div>
+                      <div className="text-muted-foreground mt-1">Faculty of Electronic Engineering</div>
+                      <div className="text-muted-foreground">Menoufia University</div>
                       
                     </CardContent>
                   </Card>
