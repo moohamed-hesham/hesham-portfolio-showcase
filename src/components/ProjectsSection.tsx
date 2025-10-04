@@ -111,11 +111,10 @@ const ProjectCard = ({ project, index, isInView }: { project: Project; index: nu
           </div>
           <span className="text-muted-foreground text-xs capitalize">{project.date}</span>
         </div>
-        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+        <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
           {project.title}
         </h3>
-        <p className="text-gray-600 text-sm mb-3">{project.description}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-3">
           {project.techStack.map((tech, index) => (
             <span 
               key={index}
@@ -125,6 +124,7 @@ const ProjectCard = ({ project, index, isInView }: { project: Project; index: nu
             </span>
           ))}
         </div>
+        <p className="text-gray-600 text-sm">{project.description}</p>
       </CardContent>
     </Card>
   </motion.div>
