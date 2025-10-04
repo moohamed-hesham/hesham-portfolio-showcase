@@ -3,7 +3,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Header = () => {
   return (
@@ -21,15 +20,14 @@ const Header = () => {
           </div>
           
           <ul className="hidden md:flex space-x-8">
-            <li><a href="#about" className="text-foreground hover:text-primary transition-colors">About</a></li>
-            <li><a href="#skills" className="text-foreground hover:text-primary transition-colors">Skills</a></li>
-            <li><a href="#experience" className="text-foreground hover:text-primary transition-colors">Experience</a></li>
-            <li><a href="#projects" className="text-foreground hover:text-primary transition-colors">Projects</a></li>
-            <li><a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a></li>
+            <li><a href="#about" className="text-gray-700 hover:text-primary transition-colors">About</a></li>
+            <li><a href="#skills" className="text-gray-700 hover:text-primary transition-colors">Skills</a></li>
+            <li><a href="#experience" className="text-gray-700 hover:text-primary transition-colors">Experience</a></li>
+            <li><a href="#projects" className="text-gray-700 hover:text-primary transition-colors">Projects</a></li>
+            <li><a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a></li>
           </ul>
           
           <div className="flex items-center gap-4">
-            <ThemeToggle />
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

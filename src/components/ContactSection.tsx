@@ -79,7 +79,7 @@ const ContactSection = () => {
     <motion.section 
       ref={ref}
       id="contact" 
-      className="py-20 bg-background"
+      className="py-20 bg-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
@@ -92,7 +92,7 @@ const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h2 className="section-title">Get In Touch</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4">Connect with me and let's discuss your data, goals, and any specific analysis requirements you have in mind to create a solution tailored to your needs.</p>
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4">Connect with me and let's discuss your data, goals, and any specific analysis requirements you have in mind to create a solution tailored to your needs.</p>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -185,7 +185,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <div className="font-medium">Languages</div>
-                      <div className="text-muted-foreground">Arabic (Native), English (Conversational)</div>
+                      <div className="text-gray-600">Arabic (Native), English (Conversational)</div>
                     </div>
                   </div>
                 </div>
