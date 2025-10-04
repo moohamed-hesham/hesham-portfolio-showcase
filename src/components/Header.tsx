@@ -22,6 +22,7 @@ const Header = () => {
           <ul className="hidden md:flex space-x-8">
             <li><a href="#about" className="text-gray-700 hover:text-primary transition-colors">About</a></li>
             <li><a href="#skills" className="text-gray-700 hover:text-primary transition-colors">Skills</a></li>
+            <li><a href="#experience" className="text-gray-700 hover:text-primary transition-colors">Experience</a></li>
             <li><a href="#projects" className="text-gray-700 hover:text-primary transition-colors">Projects</a></li>
             <li><a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a></li>
           </ul>
