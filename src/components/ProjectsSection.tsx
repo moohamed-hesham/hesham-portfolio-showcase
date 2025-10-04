@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
+import hrDashboard from '@/assets/hr-dashboard.png';
 
 interface Project {
   id: number;
@@ -51,6 +52,15 @@ const projects: Project[] = [
     image: "/lovable-uploads/e98db284-65ef-4249-b116-8d8b81839770.png",
     link: "https://github.com/moohamed-hesham/Amazone_Sales_Analysis",
     date: "Jun 2024"
+  },
+  {
+    id: 5,
+    title: "HR Analytics Dashboard - Power BI",
+    description: "HR Analytics project using Power BI focusing on salary and workforce insights. This dashboard empowers HR teams and leadership to make data-driven decisions about compensation, workforce planning, and resource allocation. The visualization transforms complex HR data into clear, actionable intelligence.",
+    category: "dashboard",
+    image: hrDashboard,
+    link: "https://github.com/moohamed-hesham/HR-Analytics-Dashoard",
+    date: "Oct 2025"
   },
 ];
 
