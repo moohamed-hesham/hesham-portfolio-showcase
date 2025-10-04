@@ -20,7 +20,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "HR Analytics Dashboard - Power BI",
+    title: "HR Analytics Dashboard",
     description: "HR Analytics project using Power BI focusing on salary and workforce insights. This dashboard empowers HR teams and leadership to make data-driven decisions about compensation, workforce planning, and resource allocation. The visualization transforms complex HR data into clear, actionable intelligence.",
     category: "dashboard",
     image: hrDashboard,
@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Azure Cloud Migration, E-commerce Analytics - Power BI",
+    title: "Azure Cloud Migration, E-commerce Analytics",
     description: "Migrated and secured an on-premises SQL Server database to Azure SQL Database. Connected Power BI to Azure SQL using DirectQuery and designed interactive dashboards covering sales performance, customer segmentation, product analytics and returned orders. Leveraged Azure Machine Learning (AutoML) for sales forecasting and customer churn prediction.",
     category: "dashboard",
     image: "/lovable-uploads/a1ec013e-16cf-49b0-a095-a9667c3871df.png",
@@ -40,7 +40,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Telecom Customer Churn Analysis - Power BI",
+    title: "Telecom Customer Churn Analysis",
     description: "Developed an interactive Power BI dashboard to analyze customer churn rates, segmentation, and key influencing factors. Accessed data via OneDrive for seamless collaboration and provided strategic recommendations to mitigate churn.",
     category: "dashboard",
     image: "/lovable-uploads/9b2e63eb-e331-4c22-bf48-89becaf3b360.png",
@@ -60,7 +60,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Amazon Sales Dashboard - Excel",
+    title: "Amazon Sales Dashboard",
     description: "Interactive Excel dashboard analyzing Amazon's sales performance, trends, top-performing products, and regional distribution to optimize inventory and marketing strategies.",
     category: "dashboard",
     image: "/lovable-uploads/e98db284-65ef-4249-b116-8d8b81839770.png",
